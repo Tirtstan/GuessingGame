@@ -86,17 +86,16 @@ namespace Guessing_Game
             string hint = txtHint.Text;
             string correctWord;
 
-            switch (hint)
+            switch (hint) // all possible outcomes of hint accounted for in a switch statement
             {
                 case "Japan":
                     if (operatorWord.ToLower() == "toyota")
-
                         correct = true;
                     else
                         correct = false;
 
-                    correctWord = "Toyota";
-                    DisplayAns(correct, correctWord);
+                    correctWord = "Toyota"; // sets correct word
+                    DisplayAns(correct, correctWord); // calls method to output everything
                     break;
 
                 case "USA":
@@ -208,6 +207,7 @@ namespace Guessing_Game
             }
         }
 
+        // method to output all answers
         private void DisplayAns(bool correct, string correctWord)
         {
             if (correct)
